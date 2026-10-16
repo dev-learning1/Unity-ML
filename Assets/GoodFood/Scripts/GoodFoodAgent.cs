@@ -81,8 +81,10 @@ public class GoodFoodAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        // 행동 (공의 이동, x와 z값을 사용하여 힘을 더해준다)
+        // 시간 벌점
+        AddReward(-0.001f);
 
+        // 행동 (공의 이동, x와 z값을 사용하여 힘을 더해준다)
         Vector3 controlSignal = Vector3.zero;
         controlSignal.x = actions.ContinuousActions[0]; // -1~1
         controlSignal.z = actions.ContinuousActions[1]; // -1~1
