@@ -34,3 +34,8 @@
 sysinfo.txt
 crashlytics-build.properties
 .DS_Store
+
+# ML-Agents training results / Unity recovery
+results/
+Assets/_Recovery/
+Assets/_Recovery.meta
