@@ -201,7 +201,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: RollerBall
   TeamId: 0
   m_UseChildSensors: 1
@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 8916599640280167672}
   - component: {fileID: 8902215033855482532}
   - component: {fileID: 5596995007187638711}
+  - component: {fileID: 4130207136929891329}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -353,6 +354,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4130207136929891329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719329980288111509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b91463d532ed3649946e2412234ff3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetMover
+  speed: 0.5
+  minRadius: 1.5
+  maxRadius: 4
 --- !u!1 &5256067383952175152
 GameObject:
   m_ObjectHideFlags: 0
