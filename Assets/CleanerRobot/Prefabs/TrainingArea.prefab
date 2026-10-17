@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 1235836894480423859}
   - component: {fileID: 4085581024057520384}
   - component: {fileID: 3286947476641860883}
-  - component: {fileID: 843834997860211058}
+  - component: {fileID: 7999479888018820897}
   - component: {fileID: 8211800618289239135}
   - component: {fileID: 2836217781427864347}
   m_Layer: 0
@@ -655,7 +655,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 16cca3704d378a84ab2748a7476f766b, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 2bb4ffe50ed9c6147be6d094d8643a61, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 2
   m_BehaviorName: RobotCleaner
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 0
   m_ObservableAttributeHandling: 0
---- !u!114 &843834997860211058
+--- !u!114 &7999479888018820897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,9 +673,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2608303671363902705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8b359ea4e82a9a42bc7541b87c905ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 660e9a09b54f75549addf3a5bdafc997, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CleanerAgent
+  m_EditorClassIdentifier: Assembly-CSharp::CleanerAgent_Hack
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
