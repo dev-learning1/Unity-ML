@@ -938,6 +938,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfVisual
   geometryType: 3
+--- !u!1 &266430089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 266430090}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &266430090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266430089}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0355, z: 0.0006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 939129860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278026349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6890,6 +6921,7 @@ GameObject:
   - component: {fileID: 683931971}
   - component: {fileID: 683931970}
   - component: {fileID: 683931969}
+  - component: {fileID: 683931972}
   m_Layer: 0
   m_Name: left_gripper
   m_TagString: Untagged
@@ -6955,9 +6987,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -0.0257436
     upperLimit: 0.0257436
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -7009,6 +7041,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &683931972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683931967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94024d50625bc1449a9140366fe5bedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FingerContact
 --- !u!1 &685451972
 GameObject:
   m_ObjectHideFlags: 0
@@ -8397,6 +8441,7 @@ GameObject:
   - component: {fileID: 939129863}
   - component: {fileID: 939129862}
   - component: {fileID: 939129861}
+  - component: {fileID: 939129864}
   m_Layer: 0
   m_Name: gripper_base
   m_TagString: Untagged
@@ -8420,6 +8465,7 @@ Transform:
   - {fileID: 862294156}
   - {fileID: 1463248517}
   - {fileID: 343118900}
+  - {fileID: 266430090}
   m_Father: {fileID: 1465295152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &939129861
@@ -8517,6 +8563,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &939129864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939129859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db82a7eb4977e094483d2b8874ccf575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GripperController
 --- !u!1 &952284913
 GameObject:
   m_ObjectHideFlags: 0
@@ -11139,6 +11197,7 @@ GameObject:
   - component: {fileID: 1551750343}
   - component: {fileID: 1551750342}
   - component: {fileID: 1551750341}
+  - component: {fileID: 1551750344}
   m_Layer: 0
   m_Name: right_gripper
   m_TagString: Untagged
@@ -11204,9 +11263,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -0.0257436
     upperLimit: 0.0257436
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -11258,6 +11317,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Robotics.UrdfImporter::Unity.Robotics.UrdfImporter.UrdfLink
   IsBaseLink: 0
+--- !u!114 &1551750344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551750339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94024d50625bc1449a9140366fe5bedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FingerContact
 --- !u!1 &1556568543
 GameObject:
   m_ObjectHideFlags: 0
