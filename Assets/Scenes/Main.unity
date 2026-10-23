@@ -1220,8 +1220,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.026797652, y: -0.12115721, z: 0.0032720082, w: 0.99226624}
-  m_LocalPosition: {x: 0.6145756, y: 0.34371495, z: -2.0419717}
+  m_LocalRotation: {x: 0.29391026, y: -0.4136223, z: 0.14306334, w: 0.84974486}
+  m_LocalPosition: {x: 0.601, y: 0.593, z: -0.286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7053,6 +7053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94024d50625bc1449a9140366fe5bedf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FingerContact
+  holdTime: 0.1
 --- !u!1 &685451972
 GameObject:
   m_ObjectHideFlags: 0
@@ -8026,7 +8027,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865309967}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d607ea46a579d44c4b19a6322ce4b9b2, type: 3}
   m_Name: 
@@ -8462,10 +8463,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 266430090}
   - {fileID: 862294156}
   - {fileID: 1463248517}
   - {fileID: 343118900}
-  - {fileID: 266430090}
   m_Father: {fileID: 1465295152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &939129861
@@ -8575,6 +8576,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db82a7eb4977e094483d2b8874ccf575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GripperController
+  rightFinger: {fileID: 1551750342}
+  leftFinger: {fileID: 683931970}
+  rightContact: {fileID: 1551750344}
+  leftContact: {fileID: 683931972}
+  rightOpen: -0.005
+  rightClose: 0.005
+  leftOpen: 0.005
+  leftClose: -0.005
+  moveTime: 0.5
+  extraCloseTime: 0.5
+  attachPoint: {fileID: 266430090}
+  useGraspCheck: 1
+  frictionCoefficient: 0.36
+  padHalfHeight: 0.006
+  padHalfWidth: 0.006
+  slipBackOff: 0.001
+  restoreCollisionDelay: 0.3
+  showTestButtons: 1
 --- !u!1 &952284913
 GameObject:
   m_ObjectHideFlags: 0
@@ -9000,9 +9019,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -80.06999
     upperLimit: 90
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -9132,9 +9151,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -109.99988
     upperLimit: 36.68001
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -10346,9 +10365,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -100.000046
     upperLimit: 109.99988
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -11329,6 +11348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94024d50625bc1449a9140366fe5bedf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FingerContact
+  holdTime: 0.1
 --- !u!1 &1556568543
 GameObject:
   m_ObjectHideFlags: 0
@@ -12245,9 +12265,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -175.00021
     upperLimit: 175.00021
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -12715,9 +12735,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -175.00021
     upperLimit: 175.00021
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
@@ -13474,9 +13494,9 @@ ArticulationBody:
   m_XDrive:
     lowerLimit: -147.49997
     upperLimit: 147.49997
-    stiffness: 0
-    damping: 0
-    forceLimit: 1
+    stiffness: 10000
+    damping: 100
+    forceLimit: 1000
     target: 0
     targetVelocity: 0
     driveType: 0
